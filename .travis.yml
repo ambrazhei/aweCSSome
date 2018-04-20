@@ -1,0 +1,36 @@
+language: node_js
+node_js: '9'
+jobs:
+  include:
+  - stage: GitHub release
+    node_js: '9'
+    script:
+    - echo "Deploying to GitHub…"
+    - PROJECT_NAME="aweCSSome"
+    - BUILD_FILE="$PROJECT_NAME.zip"
+    - zip -r $BUILD_FILE ./ -x .git/\* -x .gitignore -x .travis.yml
+    - GIT_TAG=$(git describe --tags)
+    - RELEASE_VERSION=${GIT_TAG//[^[:digit:].]/}
+    - if [[ -e $BUILD_FILE ]]; then BUILD_FILE_VERSIONED="$PROJECT_NAME-$RELEASE_VERSION";
+      mv $BUILD_FILE $BUILD_FILE_VERSIONED.zip; fi
+    deploy:
+      provider: releases
+      api_key:
+        secure: tJNEBxc0rwmuz3LoPc4ZzCGUj/kYjp/CAnScUFx00Dam8VbQDSO6HuMP6TJU3Ds/Xd075XDmyS2m+E6OOIMXuXI7aqBPvTFk22wxmSeaq4UzA1eLW/Z35PJ30MZiqGxwO+j7jfbLCb2rGCtAHiXcbjJmqYF6gTfEwxGeRXqQWPOXZzYps0yeY1eE6SI0+vvGyZEb1Iy3FUASDrMyjVRKDEg09IF4CYuxJzqXDgEwKZ0g5fSagEzd6Iq00TH+38FaGmLWkppBzR511E3BeSSOSMtPrr03tsixJlqzadBphVFQZ9lP8IfhpkpynjRNsOvyqDNfsWEgUmZIh5OhiWXqglnggY80/pM+fMAJGkZGUYXPkShA3CTtTHmMfqGxtWYCWYXqA2UfxAj8vtJhHpQZjTmftnzPvjvRDh4XOQs3Buwiz5T09vCSX1K+zOXfFbJJfCXwCwpGpIU0WrLzf46QSX8qV6h7B0VPb+aeGYPsMKThkHBqKRWLsF7MvTAW7ZvvgcGlC377o6oF/F4pKLlHFB1KsCVAscZbae3QjNYOwfZUuMrARuHufHpfbf7ko9pSSLf84eJwMvCaiaFEHAKnV9XWjfX/L2N+Lmh58zOeQGgyWx1MlYsSk6UA0xD3spOLFF+nYMWDXEwHCyORVqTnNzkgo7X1JqUGmOeL17+dLck=
+      file: "$BUILD_FILE_VERSIONED.zip"
+      skip_cleanup: true
+      on:
+        tags: true
+        repo: lovata/aweCSSome
+  - stage: NPM release
+    node_js: '9'
+    script:
+    - echo "Deploying to NPM…"
+    deploy:
+      provider: npm
+      email: account@lovata.com
+      api_key:
+        secure: AXdKuS4ajREjGhknctntEryKIptsi766ZbBa07TmriCZsz6b0DSLVe6dYFdHklfs9SBz1EGe1fGP2sFfzaKLuM7WJc7K5cRCjX0so/7ILliWJkpuMUoEYTJmk6hQx3KhaF9mxzAhxNZjdb4wTdigOpAQ9fIDR4sElzAMrRuFl6e/EU7pwGcv6qLSGyCuuYYlXvRlUei34Kvi1soUwWnIC//fk4HSsasWy1B9jPE6nQpKUV2YLmSihwxCOJW/YpVrc4v7TizOvtm3gvY4mkicRg4M0DlC1xByko571GT/qwCPDz5kRkycM/9ECKcRG1jF7CweVtnJDiSiocL75kwVxjYyqMaNNiVcehK1I7fAEtEfqdTqmyapo1N/nio67lTR5NTVJQ1KcLXT9RumHLei9KuQebuMzXuYATsIAzLnPMLTxPbSoM/49Kp3exPV/ZiRhikwypTFgg5D0Xo5FDPO4ykubwGJXI0hBhlaONte1V8RqvSCKoiC3ef3IUxbWH4AIRG5ZyZwewBSy9wMv10/vsjv7ZBCPTE3sMwE35xmQFwwrE8FfmuKvq9lbuMddDZeU9LGM/PH0wsVcEjIxQQfh6WoGISwjs6euiewbUtzpG9/gZPJu0zPbMAuXxtN4vHpXQ9fHUE22gkPL5+TiCSLPiH3XRT31hS6mwQwpFrrO7k=
+      on:
+        tags: true
+        repo: lovata/aweCSSome

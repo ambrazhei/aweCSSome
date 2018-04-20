@@ -1,0 +1,28 @@
+{
+  "name": "awecssome",
+  "version": "0.0.0",
+  "description": "Modern preprocessor agnostic CSS framework based on BEM methodology.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovata/aweCSSome.git"
+  },
+  "keywords": [
+    "CSS",
+    "Grid",
+    "layout",
+    "Framework",
+    "Custom",
+    "properties",
+    "BEM"
+  ],
+  "author": "LOVATA",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lovata/aweCSSome/issues"
+  },
+  "homepage": "https://github.com/lovata/aweCSSome#readme"
+}

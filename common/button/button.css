@@ -31,9 +31,9 @@
   white-space: nowrap;
 
   /* Colors */
-  border-color: var(--button-border-color, rgb(220, 220, 220));
+  border-color: var(--button-border-color, rgb(180, 180, 180));
   color: var(--button-color, #000000);
-  background-color: var(--button-background-color, rgb(220, 220, 220));
+  background-color: var(--button-background-color, rgb(180, 180, 180));
 
   /* Stuff */
   display: inline-block;
@@ -48,8 +48,9 @@
 .button:visited {
 
   /* Colors*/
-  border-color: var(--button-border-color, rgb(220, 220, 220));
-  background-color: var(--button-background-color, rgb(220, 220, 220));
+  border-color: var(--button-border-color, rgb(180, 180, 180));
+  color: var(--button-color, #000000);
+  background-color: var(--button-background-color, rgb(180, 180, 180));
 
   /* Stuff */
   text-decoration: none;
@@ -61,9 +62,9 @@
 .button:hover {
 
   /* Colors*/
-  border-color: var(--button-border-color);
-  color: var(--button-color);
-  background-color: var(--button-background-color);
+  border-color: var(--button-border-color, rgb(220, 220, 220));
+  color: var(--button-color, #000000);
+  background-color: var(--button-background-color, rgb(220, 220, 220));
 
   /* Stuff */
   text-decoration: none;
@@ -89,9 +90,9 @@
 .button:focus {
 
   /* Colors*/
-  border-color: var(--button-border-color);
-  color: var(--button-color);
-  background-color: var(--button-background-color);
+  border-color: var(--button-border-color, rgb(220, 220, 220));
+  color: var(--button-color, #000000);
+  background-color: var(--button-background-color, rgb(220, 220, 220));
 
   /* Stuff */
   text-decoration: none;

@@ -1,0 +1,17 @@
+/* -------------------------------------------------- */
+/* X-large size modification                          */
+/* -------------------------------------------------- */
+.button_x-large {
+
+  /* Box */
+  --button-border-width: inherit;
+  --button-border-radius: inherit;
+  --button-padding-top: 14px;
+  --button-padding-right: 28px;
+  --button-padding-bottom: 14px;
+  --button-padding-left: 28px;
+
+  /* Typographic */
+  --button-font-size: 140%;
+  --button-line-height: 140%;
+}

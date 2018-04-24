@@ -1,0 +1,101 @@
+/* -------------------------------------------------- */
+/* Modificators                                       */
+/* -------------------------------------------------- */
+@import "button_x-large.css";
+@import "button_large.css";
+@import "button_small.css";
+@import "button_x-small.css";
+@import "button_ghost.css";
+
+/* -------------------------------------------------- */
+/* Appearance                                         */
+/* -------------------------------------------------- */
+.button {
+
+  /* Box */
+  border-width: var(--button-border-width, 1px);
+  border-style: var(--button-border-style, solid);
+  border-radius: var(--button-border-radius, 2px);
+  padding-top: var(--button-padding-top, 10px);
+  padding-right: var(--button-padding-right, 20px);
+  padding-bottom: var(--button-padding-bottom, 10px);
+  padding-left: var(--button-padding-left, 20px);
+
+  /* Typographic */
+  font-size: var(--button-font-size, inherit);
+  font-style: var(--button-font-style, normal);
+  font-weight: var(--button-font-weight, normal);
+  font-family: var(--button-font-family, inherit);
+  line-height: var(--button-line-height, 100%);
+  text-align: var(--button-text-align, center);
+  white-space: nowrap;
+
+  /* Colors */
+  border-color: var(--button-border-color, rgb(180, 180, 180));
+  color: var(--button-color, #000000);
+  background-color: var(--button-background-color, rgb(180, 180, 180));
+
+  /* Stuff */
+  display: inline-block;
+  position: relative;
+  user-select: none;
+}
+.button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.button:link,
+.button:visited {
+
+  /* Colors*/
+  border-color: var(--button-border-color, rgb(180, 180, 180));
+  color: var(--button-color, #000000);
+  background-color: var(--button-background-color, rgb(180, 180, 180));
+
+  /* Stuff */
+  text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+/* Hover condition                                    */
+/* -------------------------------------------------- */
+.button:hover {
+
+  /* Colors*/
+  border-color: var(--button-border-color, rgb(220, 220, 220));
+  color: var(--button-color, #000000);
+  background-color: var(--button-background-color, rgb(220, 220, 220));
+
+  /* Stuff */
+  text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+/* Active condition                                   */
+/* -------------------------------------------------- */
+.button:active {
+
+  /* Colors*/
+  border-color: var(--button-border-color, rgb(220, 220, 220));
+  color: var(--button-color);
+  background-color: var(--button-background-color, rgb(220, 220, 220));
+
+  /* Stuff */
+  text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+/* Focus conditions                                   */
+/* -------------------------------------------------- */
+.button:focus {
+
+  /* Colors*/
+  border-color: var(--button-border-color, rgb(220, 220, 220));
+  color: var(--button-color, #000000);
+  background-color: var(--button-background-color, rgb(220, 220, 220));
+
+  /* Stuff */
+  text-decoration: none;
+}
+
+

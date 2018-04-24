@@ -1,5 +1,5 @@
 /* -------------------------------------------------- */
-/* Modificators                                         */
+/* Modificators                                       */
 /* -------------------------------------------------- */
 @import "button_x-large.css";
 @import "button_large.css";
@@ -61,9 +61,9 @@
 .button:hover {
 
   /* Colors*/
-  border-color: var(--button-hover-border-color);
-  color: var(--button-hover-color);
-  background-color: var(--button-hover-background-color);
+  border-color: var(--button-border-color);
+  color: var(--button-color);
+  background-color: var(--button-background-color);
 
   /* Stuff */
   text-decoration: none;
@@ -75,8 +75,9 @@
 .button:active {
 
   /* Colors*/
-  border-color: var(--button-active-border-color, rgb(220, 220, 220));
-  background-color: var(--button-active-background-color, rgb(220, 220, 220));
+  border-color: var(--button-border-color, rgb(220, 220, 220));
+  color: var(--button-color);
+  background-color: var(--button-background-color, rgb(220, 220, 220));
 
   /* Stuff */
   text-decoration: none;
@@ -88,9 +89,9 @@
 .button:focus {
 
   /* Colors*/
-  border-color: var(--button-focus-border-color);
-  color: var(--button-focus-color);
-  background-color: var(--button-focus-background-color);
+  border-color: var(--button-border-color);
+  color: var(--button-color);
+  background-color: var(--button-background-color);
 
   /* Stuff */
   text-decoration: none;

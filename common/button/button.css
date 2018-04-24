@@ -16,10 +16,6 @@
   border-width: var(--button-border-width, 1px);
   border-style: var(--button-border-style, solid);
   border-radius: var(--button-border-radius, 2px);
-  margin-top: var(--button-margin-top);
-  margin-right: var(--button-margin-right);
-  margin-bottom: var(--button-margin-bottom);
-  margin-left: var(--button-margin-left);
   padding-top: var(--button-padding-top, 10px);
   padding-right: var(--button-padding-right, 20px);
   padding-bottom: var(--button-padding-bottom, 10px);

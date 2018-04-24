@@ -1,0 +1,51 @@
+/* -------------------------------------------------- */
+/* Ghost modification                                 */
+/* -------------------------------------------------- */
+.button_ghost {
+
+  /* Colors*/
+  --button-border-color: inherit;
+  --button-color: inherit;
+  --button-background-color: transparent;
+}
+.button_ghost:link,
+.button_ghost:visited {
+
+  /* Colors*/
+  --button-border-color: inherit;
+  --button-border-color: inherit;
+  --button-color: inherit;
+}
+
+/* -------------------------------------------------- */
+/* Hover condition                                    */
+/* -------------------------------------------------- */
+.button_ghost:hover {
+
+  /* Colors*/
+  --button-border-color: inherit;
+  --button-color: inherit;
+  --button-background-color: inherit;
+}
+
+/* -------------------------------------------------- */
+/* Active condition                                   */
+/* -------------------------------------------------- */
+.button_ghost:active {
+
+  /* Colors*/
+  --button-border-color: inherit;
+  --button-color: inherit;
+  --button-background-color: inherit;
+}
+
+/* -------------------------------------------------- */
+/* Active condition                                   */
+/* -------------------------------------------------- */
+.button_ghost:focus {
+
+  /* Colors*/
+  --button-border-color: inherit;
+  --button-color: inherit;
+  --button-background-color: inherit;
+}

@@ -2,50 +2,35 @@
 /* Ghost modification                                 */
 /* -------------------------------------------------- */
 .button_ghost {
-
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-color: inherit;
+  /* Colors */
   --button-background-color: transparent;
-}
-.button_ghost:link,
-.button_ghost:visited {
-
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-border-color: inherit;
-  --button-color: inherit;
 }
 
 /* -------------------------------------------------- */
 /* Hover condition                                    */
 /* -------------------------------------------------- */
 .button_ghost:hover {
-
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-color: inherit;
-  --button-background-color: inherit;
-}
-
-/* -------------------------------------------------- */
-/* Active condition                                   */
-/* -------------------------------------------------- */
-.button_ghost:active {
-
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-color: inherit;
-  --button-background-color: inherit;
+  /* Colors */
+  --button-border-color: rgb(200, 200, 200);
+  --button-color: rgb(255, 255, 255);
+  --button-background-color: rgb(200, 200, 200);
 }
 
 /* -------------------------------------------------- */
 /* Active condition                                   */
 /* -------------------------------------------------- */
 .button_ghost:focus {
+  /* Colors */
+  --button-border-color: rgb(200, 200, 200);
+  --button-color: rgb(255, 255, 255);
+  --button-background-color: rgb(200, 200, 200);
+}
 
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-color: inherit;
-  --button-background-color: inherit;
+/* -------------------------------------------------- */
+/* Active condition                                   */
+/* -------------------------------------------------- */
+.button_ghost:active {
+  /* Colors */
+  --button-border-color: rgb(220, 220, 220);
+  --button-background-color: rgb(220, 220, 220);
 }

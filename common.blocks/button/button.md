@@ -17,7 +17,7 @@ HTML implementation:
 ```
 ## Using
 
-Add `@import "button.css";` file to your CSS.
+Add `@import "button.css";` file to your CSS or `@import "button-export.css";` if you need modifiers.
 
 ## Modification methods
 
@@ -109,20 +109,15 @@ The button block has next predefined custom properties:
 ```
   /* Box */
   --button-border-width
-  --button-border-style
   --button-border-radius
-  --button-padding-top
-  --button-padding-right
-  --button-padding-bottom
-  --button-padding-left
+  --button-padding-vertical
+  --button-padding-horizontal
 
   /* Typographic */
   --button-font-size
-  --button-font-style
   --button-font-weight
   --button-font-family
   --button-line-height
-  --button-text-align
 
   /* Colors */
   --button-border-color

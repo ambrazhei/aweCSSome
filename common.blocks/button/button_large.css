@@ -2,16 +2,11 @@
 /* Large size modification                            */
 /* -------------------------------------------------- */
 .button_large {
-
   /* Box */
-  --button-border-width: inherit;
-  --button-border-radius: inherit;
-  --button-padding-top: 12px;
-  --button-padding-right: 24px;
-  --button-padding-bottom: 12px;
-  --button-padding-left: 24px;
+  --button-padding-vertical: 12px;
+  --button-padding-horizontal: 24px;
+  --button-border-radius: 2px;
 
   /* Typographic */
   --button-font-size: 120%;
-  --button-line-height: 120%;
 }

@@ -1,30 +1,52 @@
 /* -------------------------------------------------- */
+/* Variables with defaults                            */
+/* -------------------------------------------------- */
+:root {
+  /* Box */
+  --button-padding-vertical: 10px;
+  --button-padding-horizontal: 20px;
+  --button-border-radius: 2px;
+  --button-border-width: 1px;
+
+  /* Typographic */
+  --button-font-size: inherit;
+  --button-font-weight: normal;
+  --button-font-family: inherit;
+  --button-line-height: 100%;
+
+  /* Colors */
+  --button-border-color: rgb(180, 180, 180);
+  --button-color: rgb(0, 0, 0);
+  --button-background-color: rgb(180, 180, 180);
+}
+
+/* -------------------------------------------------- */
 /* Appearance                                         */
 /* -------------------------------------------------- */
 .button {
-
   /* Box */
-  border-width: var(--button-border-width, 1px);
-  border-style: var(--button-border-style, solid);
-  border-radius: var(--button-border-radius, 2px);
-  padding-top: var(--button-padding-top, 10px);
-  padding-right: var(--button-padding-right, 20px);
-  padding-bottom: var(--button-padding-bottom, 10px);
-  padding-left: var(--button-padding-left, 20px);
+  box-sizing: border-box;
+  border-width: var(--button-border-width);
+  border-style: solid;
+  border-radius: var(--button-border-radius);
+  padding-top: var(--button-padding-vertical);
+  padding-right: var(--button-padding-horizontal);
+  padding-bottom: var(--button-padding-vertical);
+  padding-left: var(--button-padding-horizontal);
 
   /* Typographic */
-  font-size: var(--button-font-size, inherit);
-  font-style: var(--button-font-style, normal);
-  font-weight: var(--button-font-weight, normal);
-  font-family: var(--button-font-family, inherit);
-  line-height: var(--button-line-height, 100%);
-  text-align: var(--button-text-align, center);
+  font-size: var(--button-font-size);
+  font-style: normal;
+  font-weight: var(--button-font-weight);
+  font-family: var(--button-font-family);
+  line-height: var(--button-line-height);
+  text-align: center;
   white-space: nowrap;
 
   /* Colors */
-  border-color: var(--button-border-color, rgb(180, 180, 180));
-  color: var(--button-color, #000000);
-  background-color: var(--button-background-color, rgb(180, 180, 180));
+  border-color: var(--button-border-color);
+  color: var(--button-color);
+  background-color: var(--button-background-color);
 
   /* Stuff */
   display: inline-block;
@@ -39,9 +61,7 @@
 .button:visited {
 
   /* Colors*/
-  border-color: var(--button-border-color, rgb(180, 180, 180));
-  color: var(--button-color, #000000);
-  background-color: var(--button-background-color, rgb(180, 180, 180));
+  color: var(--button-color);
 
   /* Stuff */
   text-decoration: none;
@@ -51,42 +71,28 @@
 /* Hover condition                                    */
 /* -------------------------------------------------- */
 .button:hover {
-
   /* Colors*/
-  border-color: var(--button-border-color, rgb(220, 220, 220));
-  color: var(--button-color, #000000);
-  background-color: var(--button-background-color, rgb(220, 220, 220));
-
-  /* Stuff */
-  text-decoration: none;
-}
-
-/* -------------------------------------------------- */
-/* Active condition                                   */
-/* -------------------------------------------------- */
-.button:active {
-
-  /* Colors*/
-  border-color: var(--button-border-color, rgb(220, 220, 220));
-  color: var(--button-color);
-  background-color: var(--button-background-color, rgb(220, 220, 220));
-
-  /* Stuff */
-  text-decoration: none;
+  --button-border-color: rgb(200, 200, 200);
+  --button-color: rgb(0, 0, 0);
+  --button-background-color: rgb(200, 200, 200);
 }
 
 /* -------------------------------------------------- */
 /* Focus conditions                                   */
 /* -------------------------------------------------- */
 .button:focus {
-
   /* Colors*/
-  border-color: var(--button-border-color, rgb(220, 220, 220));
-  color: var(--button-color, #000000);
-  background-color: var(--button-background-color, rgb(220, 220, 220));
-
-  /* Stuff */
-  text-decoration: none;
+  --button-border-color: rgb(200, 200, 200);
+  --button-color: rgb(0, 0, 0);
+  --button-background-color: rgb(200, 200, 200);
 }
 
-
+/* -------------------------------------------------- */
+/* Active condition                                   */
+/* -------------------------------------------------- */
+.button:active {
+  /* Colors*/
+  --button-border-color: rgb(220, 220, 220);
+  --button-color: rgb(0, 0, 0);
+  --button-background-color: rgb(220, 220, 220);
+}

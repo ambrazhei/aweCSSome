@@ -1,10 +1,3 @@
-<link rel="stylesheet" href="button.css">
-<link rel="stylesheet" href="button_x-large.css">
-<link rel="stylesheet" href="button_large.css">
-<link rel="stylesheet" href="button_small.css">
-<link rel="stylesheet" href="button_x-small.css">
-<link rel="stylesheet" href="button_ghost.css">
-
 # Button block
 
 Button is a logically and functionally independent reusable page component ([block](https://en.bem.info/methodology/key-concepts/#block)), which represents a control allowing a user to trigger actions on the page.
@@ -22,6 +15,9 @@ HTML implementation:
 ```
 <a class="button" href="#">button</a>
 ```
+## Using
+
+Add `@import "button.css";` file to your CSS.
 
 ## Modification methods
 

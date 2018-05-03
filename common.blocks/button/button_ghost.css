@@ -2,8 +2,13 @@
 /* Ghost modification                                 */
 /* -------------------------------------------------- */
 .button_ghost {
+  /* Box */
+  --button-border-width: var(--button-border-width-zero);
+
   /* Colors */
+  --button-color: var(--button-border-color);
   --button-background-color: transparent;
+  --button-background-image: none;
 }
 
 /* -------------------------------------------------- */
@@ -11,8 +16,8 @@
 /* -------------------------------------------------- */
 .button_ghost:hover {
   /* Colors */
-  --button-border-color: rgb(200, 200, 200);
-  --button-color: rgb(255, 255, 255);
+  --button-border-color: var(--button-background-color);
+  --button-color: rgb(0, 0, 0);
   --button-background-color: rgb(200, 200, 200);
 }
 
@@ -21,8 +26,8 @@
 /* -------------------------------------------------- */
 .button_ghost:focus {
   /* Colors */
-  --button-border-color: rgb(200, 200, 200);
-  --button-color: rgb(255, 255, 255);
+  --button-border-color: var(--button-background-color);
+  --button-color: rgb(0, 0, 0);
   --button-background-color: rgb(200, 200, 200);
 }
 
@@ -31,6 +36,7 @@
 /* -------------------------------------------------- */
 .button_ghost:active {
   /* Colors */
-  --button-border-color: rgb(220, 220, 220);
+  --button-border-color: var(--button-background-color);
+  --button-color: rgb(0, 0, 0);
   --button-background-color: rgb(220, 220, 220);
 }

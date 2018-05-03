@@ -39,6 +39,7 @@ The button block has pedefined modifiers:
 .button_small       /* decrease size to 80% */
 .button_x-small     /* decrease size to 60% */
 .button_ghost       /* make a ghost button (transparent background) */
+.button_border-zero /* make possibile using gradient background and inset shadows on borders */
 ```
 
 Let's increase the button block size by adding `.button_large` modifier which will increase its size to 120%.

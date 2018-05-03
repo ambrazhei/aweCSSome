@@ -2,50 +2,41 @@
 /* Ghost modification                                 */
 /* -------------------------------------------------- */
 .button_ghost {
+  /* Box */
+  --button-border-width: var(--button-border-width-zero);
 
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-color: inherit;
+  /* Colors */
+  --button-color: var(--button-border-color);
   --button-background-color: transparent;
-}
-.button_ghost:link,
-.button_ghost:visited {
-
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-border-color: inherit;
-  --button-color: inherit;
+  --button-background-image: none;
 }
 
 /* -------------------------------------------------- */
 /* Hover condition                                    */
 /* -------------------------------------------------- */
 .button_ghost:hover {
-
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-color: inherit;
-  --button-background-color: inherit;
-}
-
-/* -------------------------------------------------- */
-/* Active condition                                   */
-/* -------------------------------------------------- */
-.button_ghost:active {
-
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-color: inherit;
-  --button-background-color: inherit;
+  /* Colors */
+  --button-border-color: var(--button-background-color);
+  --button-color: rgb(0, 0, 0);
+  --button-background-color: rgb(200, 200, 200);
 }
 
 /* -------------------------------------------------- */
 /* Active condition                                   */
 /* -------------------------------------------------- */
 .button_ghost:focus {
+  /* Colors */
+  --button-border-color: var(--button-background-color);
+  --button-color: rgb(0, 0, 0);
+  --button-background-color: rgb(200, 200, 200);
+}
 
-  /* Colors*/
-  --button-border-color: inherit;
-  --button-color: inherit;
-  --button-background-color: inherit;
+/* -------------------------------------------------- */
+/* Active condition                                   */
+/* -------------------------------------------------- */
+.button_ghost:active {
+  /* Colors */
+  --button-border-color: var(--button-background-color);
+  --button-color: rgb(0, 0, 0);
+  --button-background-color: rgb(220, 220, 220);
 }

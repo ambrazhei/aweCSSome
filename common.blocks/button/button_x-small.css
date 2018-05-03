@@ -2,16 +2,10 @@
 /* X-small size modification                          */
 /* -------------------------------------------------- */
 .button_x-small {
-
   /* Box */
-  --button-border-width: inherit;
-  --button-border-radius: inherit;
-  --button-padding-top: 6px;
-  --button-padding-right: 12px;
-  --button-padding-bottom: 6px;
-  --button-padding-left: 12px;
+  --button-padding-vertical: 6px;
+  --button-padding-horizontal: 12px;
 
   /* Typographic */
   --button-font-size: 60%;
-  --button-line-height: 60%;
 }

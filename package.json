@@ -1,6 +1,6 @@
 {
   "name": "awecssome",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Modern preprocessor agnostic CSS framework based on BEM methodology.",
   "main": "index.js",
   "scripts": {

@@ -6,5 +6,7 @@
   --button-border-width: 0;
 
   padding-top: calc(var(--button-padding-vertical) + var(--button-border-width-zero));
+  padding-right: calc(var(--button-padding-horizontal) + var(--button-border-width-zero));
   padding-bottom: calc(var(--button-padding-vertical) + var(--button-border-width-zero));
+  padding-left: calc(var(--button-padding-horizontal) + var(--button-border-width-zero));
 }

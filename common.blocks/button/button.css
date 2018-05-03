@@ -104,17 +104,8 @@
 /* Active condition                                   */
 /* -------------------------------------------------- */
 .button:active {
-  /* Box */
-  --button-border-width: 0;
-
-  padding-top: calc(var(--button-padding-vertical) + var(--button-border-width-zero));
-  padding-right: calc(var(--button-padding-horizontal) + var(--button-border-width-zero));
-  padding-bottom: calc(var(--button-padding-vertical) + var(--button-border-width-zero));
-  padding-left: calc(var(--button-padding-horizontal) + var(--button-border-width-zero));
-
   /* Colors */
   --button-border-color: var(--button-background-color);
-  --button-box-shadow: inset 0px 15px 16px 0px rgba(0, 0, 0, 0.3);
   --button-color: rgb(0, 0, 0);
   --button-background-color: rgb(220, 220, 220);
 }

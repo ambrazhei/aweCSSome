@@ -3,6 +3,7 @@
   --grid-columns-number: 24;
   --grid-columns-min: 13;
   --grid-columns-max: 50;
+  --grid-column-percentage-size: calc(100% / var(--grid-columns-number));
   --grid-gap: 0;
   --max-width: 1920;
 

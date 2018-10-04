@@ -9,11 +9,13 @@ The page grid is generated based on CSS Grid Layout Module Level 1. The `grid-te
 The default grid system settings are stored in CSS custom properties and are below (px units):
 
 ```
---grid-columns-number: 24;  # columns quantity
---grid-columns-min: 13;     # min width for column (track)
---grid-columns-max: 90;     # max width for column (track)
---grid-gap: 0;              # column gutter width
---max-width: 1920;          # max width for page wrapper
+--grid-columns-number: 24;              # columns quantity
+--grid-columns-min: 13;                 # min width for column (track)
+--grid-columns-max: 90;                 # max width for column (track)
+--grid-column-percentage-size: 
+calc(100% / var(--grid-columns-number)) # percentage size of a grid column in current context
+--grid-gap: 0;                          # column gutter width
+--max-width: 1920;                      # max width for page wrapper
 ```
 
 Min width of the page wrapper is set automatically by multiplying of `--grid-columns-number` on `--grid-columns-min` custom properties (variables). Max width is set manually by the direct value of `--max-width` custom property.
@@ -61,3 +63,11 @@ Grid system allows limiting the main content area to less than the whole wrapper
 In this case, you are able to expand blocks to the full width by adding `.full-width` CSS class to them.
 
 `.subgrid` and `.full-width` can be combined to get an expanded block with a subgrid.
+
+## Column percentage size
+
+`--grid-column-percentage-size` custom property returns the actual size of a grid column depending on the current value (in cascade) of `--grid-columns-number`.
+
+It would be useful, for example, for setting gutters (`column-gap` CSS property) equal to the column size in current grid container or for sizing items following the current grid in a current non-grid container.
+
+In case you need a multiplied value of `--grid-column-percentage-size` custom property use `calc()` function. For example multiplication to 2 will looks like this `width: calc(var(--grid-column-percentage-size) * 2)`.

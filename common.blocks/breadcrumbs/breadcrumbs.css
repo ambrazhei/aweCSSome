@@ -1,0 +1,11 @@
+:root {
+  /* Typographic */
+  --breadcrumbs-font-size: inherit;
+  --breadcrumbs-font-weight: inherit;
+  --breadcrumbs-font-family: inherit;
+  --breadcrumbs-line-height: inherit;
+  --breadcrumbs-separator: "\2192";
+
+  /* Colors */
+  --breadcrumbs-color: inherit;
+}

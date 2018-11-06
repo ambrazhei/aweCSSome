@@ -1,0 +1,11 @@
+/* -------------------------------------------------- */
+/* Variables and defaults                             */
+/* -------------------------------------------------- */
+
+.breadcrumbs__list_last-header {
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__list_last-header :last-child {
+  flex-basis: 100%;
+}

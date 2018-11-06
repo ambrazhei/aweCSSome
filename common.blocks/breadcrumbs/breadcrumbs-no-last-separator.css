@@ -1,0 +1,43 @@
+/* -------------------------------------------------- */
+/* Variables and defaults                             */
+/* -------------------------------------------------- */
+:root {
+  /* Box */
+
+  /* Typographic */
+  --breadcrumbs-font-size: inherit;
+  --breadcrumbs-font-weight: inherit;
+  --breadcrumbs-font-family: inherit;
+  --breadcrumbs-line-height: inherit;
+  --breadcrumbs-separator: "\2192";
+
+  /* Colors */
+  --breadcrumbs-color: inherit;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  list-style: none;
+  font-size: var(--breadcrumbs-font-size);
+  font-weight: var(--breadcrumbs-font-weight);
+  font-family: var(--breadcrumbs-font-family);
+  color: var(--breadcrumbs-color);
+}
+
+.breadcrumbs_last-header {
+  flex-wrap: wrap;
+}
+
+.breadcrumbs_last-header :last-child {
+  flex-basis: 100%;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: var(--breadcrumbs-separator);
+}
+
+.breadcrumbs_no-last-separator :nth-last-child(2)::after {
+  content: '';
+}

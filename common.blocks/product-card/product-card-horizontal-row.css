@@ -1,5 +1,5 @@
-.product-card__horizontal-row {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:        
+.product-card_horizontal-row {
+    --product-card-template-colums: repeat(3, 1fr);
+    --product-card-layout:        
         "img info offer";    
 }

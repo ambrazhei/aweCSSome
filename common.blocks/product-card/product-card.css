@@ -2,25 +2,26 @@
 /* Variables and defaults                             */
 /* -------------------------------------------------- */
 :root {
+
+    /* Layout */
     --product-card-template-colums: 1fr;
     --product-card-layout:         
         "img"
         "info"
         "offer"; 
-    --product-card-gap: 1.5rem;   
     
+    /* Box */
+    --product-card-border-width: 1px;
+    --product-card-border-radius: 5px;
     --product-card-padding-vertical: 1.5rem;
     --product-card-padding-horizontal: 1.5rem;
+    --product-card-gap: 1.5rem;
 
-    --product-card-border-width: 1px;
+    /* Color */
+    --product-card-border-color: rgb(0,0,0);
     --product-card-border-style: solid;
-    --product-card-border-color: #000;
+    --product-card-box-shadow: none;
 
-    /* Typographic */
-    /*--product-card-header-font-size: inherit;
-    --product-card-header-font-weight: normal;
-    --product-card-header-font-family: inherit;
-    --product-card-header-line-height: 100%;*/
 }
 
 /* -------------------------------------------------- */
@@ -29,24 +30,36 @@
 
 .product-card {
     
+    /* Layout */
+    display: grid;
+    grid-gap: var(--product-card-gap);
+    grid-template-columns: var(--product-card-template-colums);
+    grid-template-areas: var(--product-card-layout);
+
+    /* Box */
     padding-top: var(--product-card-padding-vertical);
     padding-right: var(--product-card-padding-horizontal);
     padding-bottom: var(--product-card-padding-vertical);
     padding-left: var(--product-card-padding-horizontal);
 
     border-width: var(--product-card-border-width);
+    border-radius: var(--product-card-border-radius);
+
+    /* Color */
     border-style: var(--product-card-border-style);
-    border-color: var(--product-card-border-color); 
-    
-    display: grid;
-    grid-gap: var(--product-card-gap);
-    grid-template-columns: var(--product-card-template-colums);
-    grid-template-areas: var(--product-card-layout);
+    border-color: var(--product-card-border-color);
+
+    box-shadow: var(--product-card-box-shadow);
+
 }
 
 .product-card__text {
     /*order: 1; */   
     grid-area: info;
+}
+
+.product-card__header { 
+    word-break: break-word;
 }
 
 .product-card__offer {
@@ -59,7 +72,6 @@
 }
 
 .product-card__offer-button {
-
     align-self: flex-start;
 }
 
@@ -68,9 +80,8 @@
 }
 
 .product-card__image {
-
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 

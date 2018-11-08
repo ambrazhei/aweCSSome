@@ -1,6 +1,6 @@
 # Product Card block
 
-Product card is a logically and functionally independent reusable page component ([block](https://en.bem.info/methodology/key-concepts/#block)) which allows user to добавить продукт в корзину и перейти по ссылке на страницу продукта.
+Product card is a logically and functionally independent reusable page component ([block](https://en.bem.info/methodology/key-concepts/#block)) which allows user to add the product to the cart and navigates to the product page.
 
 By default, the product card layout contains three parts: the image section, the header section and the offer section (which includes the price and the "Add to cart" button).
 

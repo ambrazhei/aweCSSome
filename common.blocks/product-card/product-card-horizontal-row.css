@@ -1,0 +1,5 @@
+.product-card__horizontal-row {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:        
+        "img info offer";    
+}

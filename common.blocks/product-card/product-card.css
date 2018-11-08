@@ -1,0 +1,76 @@
+/* -------------------------------------------------- */
+/* Variables and defaults                             */
+/* -------------------------------------------------- */
+:root {
+    --product-card-template-colums: 1fr;
+    --product-card-layout:         
+        "img"
+        "info"
+        "offer"; 
+    --product-card-gap: 1.5rem;   
+    
+    --product-card-padding-vertical: 1.5rem;
+    --product-card-padding-horizontal: 1.5rem;
+
+    --product-card-border-width: 1px;
+    --product-card-border-style: solid;
+    --product-card-border-color: #000;
+
+    /* Typographic */
+    /*--product-card-header-font-size: inherit;
+    --product-card-header-font-weight: normal;
+    --product-card-header-font-family: inherit;
+    --product-card-header-line-height: 100%;*/
+}
+
+/* -------------------------------------------------- */
+/* Appearance                                         */
+/* -------------------------------------------------- */
+
+.product-card {
+    
+    padding-top: var(--product-card-padding-vertical);
+    padding-right: var(--product-card-padding-horizontal);
+    padding-bottom: var(--product-card-padding-vertical);
+    padding-left: var(--product-card-padding-horizontal);
+
+    border-width: var(--product-card-border-width);
+    border-style: var(--product-card-border-style);
+    border-color: var(--product-card-border-color); 
+    
+    display: grid;
+    grid-gap: var(--product-card-gap);
+    grid-template-columns: var(--product-card-template-colums);
+    grid-template-areas: var(--product-card-layout);
+}
+
+.product-card__text {
+    /*order: 1; */   
+    grid-area: info;
+}
+
+.product-card__offer {
+    /*order: 2;*/
+    grid-area: offer;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.product-card__offer-button {
+
+    align-self: flex-start;
+}
+
+.product-card__image-wrapper {
+    grid-area: img;
+}
+
+.product-card__image {
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+

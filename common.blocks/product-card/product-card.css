@@ -51,6 +51,7 @@
 
 .product-card__price-wrap {
   align-self: flex-start;
+  display: flex;
 }
 
 .product-card__offer-button {

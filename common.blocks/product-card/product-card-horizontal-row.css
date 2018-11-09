@@ -1,5 +1,10 @@
+/* -------------------------------------------------- */
+/* Horizontal in 3 columns modification               */
+/* -------------------------------------------------- */
+
 .product-card_horizontal-row {
-    --product-card-template-colums: repeat(3, 1fr);
-    --product-card-layout:        
-        "img info offer";    
+  /* Layout */
+  --product-card-template-colums: repeat(3, 1fr);
+  --product-card-layout:        
+      "img info offer";    
 }

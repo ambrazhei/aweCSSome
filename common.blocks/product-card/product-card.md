@@ -1,6 +1,6 @@
 # Product Card block
 
-Product card is a logically and functionally independent reusable page component ([block](https://en.bem.info/methodology/key-concepts/#block)) which allows user to add the product to the cart and navigates to the product page.
+Product card is a logically and functionally independent reusable page component ([block](https://en.bem.info/methodology/key-concepts/#block)) which allows the user to add the product to the cart and navigates to the product page.
 
 By default, the product card layout contains three parts: the image section, the header section and the offer section (which includes the price and the "Add to cart" button).
 
@@ -10,26 +10,27 @@ HTML implementation:
 <div role="listitem" class="product-card" itemscope itemtype="http://schema.org/Product">
     <div class="product-card__text">
         <h3 class="product-card__header" itemprop="name">
-            <a href="#" class="product-card__header-link">Product Name</a>
+            <a href="#" class="product-card__header-link">Product</a>
         </h3>
         <!-- Additional custom block here -->
     </div>
-
-    <div class="product-card__offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer">        
+    <div class="product-card__offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
         <!-- Additional custom block here -->
-        <span class="product-card__price" itemprop="price" content="99.9">99.9<span class="product-card__price-currency" itemprop="priceCurrency" content="USD">$</span></span>
+        <span class="product-card__price-wrap" aria-label="$99.9">        
+            <span class="product-card__price-currency" itemprop="priceCurrency" content="USD" aria-hidden="true">$</span>
+            <span class="product-card__price" itemprop="price" aria-hidden="true">99.9</span>
+        </span>           
         <button class="product-card__offer-button">Add to cart</button>
     </div>
-
     <div class="product-card__image-wrapper">
-        <img class="product-card__image" src="img2.jpg" alt="Description of the great product's appearance" itemprop="image">        
+        <img class="product-card__image" src="img2.jpg" alt="Image description" itemprop="image">
         <!-- Additional custom block here -->
     </div>
 </div>
 
 ```
 
-Product card has a vertical layout by default.
+> Product card has a vertical layout by default.
 
 ## Using
 
@@ -98,29 +99,12 @@ The product card block has next predefined custom properties:
   --product-card-template-colums
   --product-card-layout
 
-  /* Box */
-  --product-card-border-width
-  --product-card-border-radius
-  --product-card-padding-vertical
-  --product-card-padding-horizontal
-  --product-card-gap
+  /* Typographic */
+  --product-card-font-size
+  --product-card-font-weight
+  --product-card-font-family
+  --product-card-line-height
 
-  /* Colors */
-  --product-card-border-color
-  --product-card-border-style
-  --product-card-box-shadow
-```
-
-Let's change the product card block border by redefining the CSS rules for the block on the project level (project.blocks) by setting the values of the necessary custom properties.
-
-CSS implementation:
-
-```
-.product-card {
-  --product-card-border-width: 2px;
-  --product-card-border-color: #999;
-  --product-card-border-radius: 10px;
-}
 ```
 
 As a result, rules from both redefinition levels should be compiled by your build script and applied to the product card block.

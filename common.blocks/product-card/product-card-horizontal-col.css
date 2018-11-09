@@ -1,6 +1,11 @@
+/* -------------------------------------------------- */
+/* Horizontal in 2 columns modification               */
+/* -------------------------------------------------- */
+
 .product-card_horizontal-col {
-    --product-card-template-colums: 1fr 2fr;
-    --product-card-layout:        
-        "img info"
-        "img offer";    
+  /* Layout */
+  --product-card-template-colums: 1fr 2fr;
+  --product-card-layout:      
+      "img info"
+      "img offer";    
 }

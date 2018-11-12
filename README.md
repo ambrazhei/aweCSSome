@@ -20,10 +20,10 @@
 
 ## Description
 
-aweCSSome is ready to use out of the box because it's written on vanilla CSS and don't need building step. The main advantages are:
+aweCSSome is ready to use out of the box because it's written on vanilla CSS and doesn't require building. The main advantages are:
 
 - flexible and predictable architecture based on [BEM methodology](https://en.bem.info/methodology);
-- no need to overriding the framework code because there's no default theme provided;
+- no need in overriding the framework code because there's no default theme provided;
 - SEO-friendly HTML markup enriched by [microdata](https://schema.org);
 - mobile-friendly by virtue of following of [Google recommendations](https://developers.google.com/search/mobile-sites) and using web standards capabilities;
 - [WCAG 2.0](https://www.w3.org/TR/WCAG20) compliance HTML markup for developing inclusive web interfaces.
@@ -65,7 +65,7 @@ aweCSSome is compatible with **2 recent** versions of:
 * Opera
 * Safari
 
-We support only fresh browsers to keep components code clean and performance.
+We support only fresh browsers to keep our components' code clean and provide high performance.
 
 The browserlist config is provided.
 
@@ -104,7 +104,7 @@ project
 
 ### No default theme
 
-AweCSSome doesn't have a default theme for page components. Component's CSS code represents only their composition, not the appearance. So there's no need for a developer to override framework's code. Just write (extend) your own code (add new properties) next to the component's code following BEM's redefinition levels [rules](https://en.bem.info/methodology/redefinition-levels).
+AweCSSome doesn't have a default theme for page components. Component's CSS code represents only their composition, not the appearance. So there's no need for a developer to override the framework code. Just write (extend) your own code (add new properties) next to the component's code following BEM's redefinition levels [rules](https://en.bem.info/methodology/redefinition-levels).
 
 **Example**
 
@@ -135,7 +135,7 @@ You can add any number of modifiers to a block. Besides you can add your custom 
 
 ### Mobile friendly
 
-Following actual global trends, aweCSSome framework has built based on mobile first approach. 
+Following actual global trends, aweCSSome framework was built based on mobile first approach. 
 
 Each component provides best practices for dealing with content images on different screen resolutions and image formats.
 
@@ -160,13 +160,13 @@ Each component provides best practices for dealing with content images on differ
 
 HTML markup of all components was developed based on semantic of HTML5 tags. It gives a lot of benefits besides SEO. In addition to semantic markup aweCSSome components are enriched by structured metadata using [microdata](https://schema.org/docs/gs.html) for common cases (product cards, reviews etc.).
 
-These efforts lead to successful project indexation by search engines and to enhance "snippet" make them "rich", or short piece of quoted text that is shown when the page appears in [search listings](https://developers.google.com/search/docs/guides/mark-up-content).
+These efforts lead to successful project indexing by search engines and enhance website "snippet" by making it "rich", or a short piece of quoted text shown when the page appears in [search listings](https://developers.google.com/search/docs/guides/mark-up-content).
 
 ### WCAG 2.0 compliance
 
-As well as given benefits for SEO appropriate semantic of HTML markup of aweCSSome components improves the accessibility of the user interface.
+SEO appropriate HTML markup semantics of aweCSSome components improves the accessibility of the user interface.
 
-Accessibility of the components is improved by following [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices). All of the components will be polished  to be [WCAG 2.0](https://www.w3.org/TR/WCAG20) compliance.
+Accessibility of components is improved by following [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices). All of the components will be polished to be [WCAG 2.0](https://www.w3.org/TR/WCAG20) compliant.
 
 ## Contributing
 

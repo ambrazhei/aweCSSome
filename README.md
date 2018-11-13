@@ -57,12 +57,17 @@ Coming soon!
 
 ## Browser support
 
-aweCSSome is compatible with **2 recent** versions of:
+aweCSSome is compatible with **2 recent** desktop versions of:
 
 * Chrome
 * Edge
 * Firefox
 * Opera
+* Safari
+
+and **2 recent** mobile versions of:
+
+* Chrome
 * Safari
 
 We support only fresh browsers to keep our components' code clean and provide high performance.

@@ -1,6 +1,3 @@
-/* -------------------------------------------------- */
-/* Variables and defaults                             */
-/* -------------------------------------------------- */
 :root {
   /* Typographic */
   --breadcrumbs-font-size: inherit;
@@ -11,18 +8,4 @@
 
   /* Colors */
   --breadcrumbs-color: inherit;
-}
-
-.breadcrumbs {
-  margin: 0;
-  padding-left: 0;
-  display: flex;
-  list-style: none;
-  font-size: var(--breadcrumbs-font-size);
-  font-weight: var(--breadcrumbs-font-weight);
-  font-family: var(--breadcrumbs-font-family);
-  color: var(--breadcrumbs-color);
-}
-.breadcrumbs__item:not(:last-child)::after {
-  content: var(--breadcrumbs-separator);
 }

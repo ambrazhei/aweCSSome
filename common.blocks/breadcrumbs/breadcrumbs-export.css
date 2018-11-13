@@ -2,5 +2,6 @@
 /* Block export                                       */
 /* -------------------------------------------------- */
 @import "breadcrumbs.css";
-@import "breadcrumbs_last-header.css";
-@import "breadcrumbs_no-last-separator.css";
+@import "breadcrumbs__list.css";
+@import "breadcrumbs__list_last-header.css";
+@import "breadcrumbs__list_no-last-separator.css";

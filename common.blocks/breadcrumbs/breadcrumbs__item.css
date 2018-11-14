@@ -2,6 +2,11 @@
 /* Variables and defaults                             */
 /* -------------------------------------------------- */
 
-.breadcrumbs__list_no-last-separator :nth-last-child(2)::after {
-  content: '';
+:root {
+  /* Typographic */
+  --breadcrumbs-separator: "\2192";
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: var(--breadcrumbs-separator);
 }

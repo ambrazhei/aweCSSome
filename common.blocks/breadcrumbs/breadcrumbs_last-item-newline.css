@@ -2,10 +2,10 @@
 /* Variables and defaults                             */
 /* -------------------------------------------------- */
 
-.breadcrumbs__list_last-header {
+.breadcrumbs_last-item-newline {
   flex-wrap: wrap;
 }
 
-.breadcrumbs__list_last-header :last-child {
+.breadcrumbs_last-item-newline :last-child {
   flex-basis: 100%;
 }

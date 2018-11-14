@@ -1,149 +1,147 @@
 # Breadcrumbs block
 
-Breadcrumbs is a logically and functionally independent reusable page component ([block](https://en.bem.info/methodology/key-concepts/#block)), which represents a navigation tree allowing a user to trigger actions on the page.
+**Breadcrumbs** is a logically and functionally independent reusable page component ([block](https://en.bem.info/methodology/key-concepts/#block)), which represents a secondary navigation scheme that reveals the user's location in a website.
 
 HTML implementation:
 
-```
-<button class="button" type="button">Button</button>
+```html
+<ul class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Index</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Category</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" aria-current="page">Subategory</a></li>
+</ul>
 ```
 
-It's possible to represent hyperlink as a button with appereance.
-
-HTML implementation:
-
-```
-<a class="button" href="#">button</a>
-```
 ## Using
 
-Add `@import "button.css";` file to your CSS or `@import "button-export.css";` if you need modifiers.
+Add `@import 'breadcrumbs-export.css';` file to your CSS entry point.
 
 ## Modification methods
 
-The default behavior and appereance of the button block can modified using next BEM [modification methods](https://en.bem.info/methodology/block-modification/):
+The default behavior and appereance of the button block can modified using these BEM [modification methods](https://en.bem.info/methodology/block-modification/):
 
-*   [Modifiers](https://en.bem.info/methodology/block-modification/#using-a-modifier-to-change-a-block)
-*   [Mixes](https://en.bem.info/methodology/block-modification/#using-a-mix-to-change-a-block)
-*   [Redefinition levels](https://en.bem.info/methodology/block-modification/#using-redefinition-levels-to-change-a-block)
+* [Modifiers](https://en.bem.info/methodology/block-modification/#using-a-modifier-to-change-a-block)
+* [Mixes](https://en.bem.info/methodology/block-modification/#using-a-mix-to-change-a-block)
+* [Redefinition levels](https://en.bem.info/methodology/block-modification/#using-redefinition-levels-to-change-a-block)
 
 ### Modification by modifiers
 
 Use a [modifier](https://en.bem.info/methodology/block-modification/#using-a-modifier-to-change-a-block) to change one specific instance of a block without affecting surrounding blocks.
 
-The button block has pedefined modifiers:
+The **breadcrumbs** block has the following predefined modifiers:
 
-```
-.button_x-large     /* increase size to 140% */
-.button_large       /* increase size to 120% */
-.button_small       /* decrease size to 80% */
-.button_x-small     /* decrease size to 60% */
-.button_ghost       /* make a ghost button (transparent background) */
-.button_border-zero /* make possibile using gradient background and inset shadows on borders */
+```css
+.breadcrumbs_last-item-newline      /* moves the last item to the new line */
+.breadcrumbs_last-separator-hidden  /* hide last separator */
 ```
 
-Let's increase the button block size by adding `.button_large` modifier which will increase its size to 120%.
+Let's move the **breadcrumbs** last item  to the new line by adding `breadcrumbs_last-item-newline` modifier which is useful if you want to present it visually as a page header.
+
+HTML implementation:
+
+```html
+<ul class="breadcrumbs breadcrumbs_last-item-newline" role="navigation" aria-label="breadcrumbs">
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Index</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Category</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" aria-current="page">Subategory</a></li>
+</ul>
+```
+
+You can add any number of modifiers to a block. For example add `breadcrumbs_last-separator-hidden` to hide the separator before the last item.
 
 HTML implementation:
 
 ```
-<button class="button button_large" type="button">Button</button>
+<ul class="breadcrumbs breadcrumbs_last-item-newline breadcrumbs_last-separator-hidden" role="navigation" aria-label="breadcrumbs">
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Index</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Category</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" aria-current="page">Subategory</a></li>
+</ul>
 ```
 
-You can add any number of modifiers to a block. For example add `button_ghost` to the prevoius example to make ghost button;
-
-HTML implementation:
-
-```
-<button class="button button_large button_ghost" type="button">default</button>
-```
-
-You can add your custom modifiers by [redefinition levels](#Modification%20by%20redefinition%20levels).
+You can add your custom modifiers on project [redefinition level](#Modification-by-redefinition-levels).
 
 ### Modification by mixes
 
 Use a [mix](https://en.bem.info/methodology/block-modification/#using-a-mix-to-change-a-block) to place additional BEM entities on the same DOM node as the block to combine the behavior and style of multiple entities without duplicating code and affecting surrounding blocks.
 
-Let's place the button block in the right top corner inside `.modal` block. In the BEM methodology, a block's position on the page is set in the parent block as their element and is mixed with the placed block. This allows the blocks to be independent and reusable.
+Let's place the **breadcrumbs** block in the specific `grid-area`. In the BEM methodology, a block's position on the page is set in the parent block as their element and is mixed with the placed block. This allows the blocks to be independent and reusable.
 
 HTML implementation:
 
-```
-<div class="modal">
-    <button class="button modal__button" type="button">close</button>
-    <p>Content goes here...</p>
-</div>
+```html
+<main class="content">
+    <ul class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Index</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Category</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" aria-current="page">Subategory</a></li>
+    </ul>
+<main>
 ```
 
 CSS implementation:
 
-```
-.modal__button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+```css
+.content__breadcrumbs {
+    grid-area: breadcrumbs;
 }
 ```
 
 ### Modification by redefinition levels
 
-Use a [redefinition levels](https://ru.bem.info/methodology/redefinition-levels) to change the default look of the button block to fit your project design.
+Use [redefinition levels](https://ru.bem.info/methodology/redefinition-levels) to change the default look of the **breadcrumbs** block to fit your project design.
 
 Changes are made to the block by combining the block custom and regular properties from different redefinition levels. Blocks can be [extended and redefined](https://en.bem.info/methodology/redefinition-levels/#changing-the-block-implementation) on a separate level and applied during assembly.
 
-Redefining is the changing the existing (predefined) custom properties of the button block while extending is the adding new properties to it.
+Redefining is changing the existing (predefined) custom properties of the **breadcrumbs** block while extending is adding new properties to it.
 
-File structure with the new rules for the button (button.css) on the project.blocks level:
+File structure with the new rules for **breadcrumbs** (button.css) on the project.blocks level:
 
-```
+```sh
 project/
-    library.blocks/
-        button/
-            button.css  # original CSS implementation of the button in the library
+    common.blocks/
+        breadcrumbs/
+            breadcrumbs__item.css                 # CSS implementation of the item element
+            breadcrumbs_last-item-newline.css     # CSS implementations of the last-item-newline modifier
+            breadcrumbs_last-separator-hidden.css # CSS implementations of the last-separator-hidden modifier
+            breadcrumbs-export.css                # export point of the block CSS implementation
+            breadcrumbs.css                       # main CSS implementation of the block
+            breadcrumbs.md                        # block documentation
     project.blocks/
-        button/
-            button.css  # redefinition on the project level
+        breadcrumbs/
+            breadcrumbs__item.css                 # redefinition of the item element on the project level
 ```
 
-The button block has next predefined custom properties:
+The **breadcrumbs** block has the following predefined custom properties (variables):
 
-```
-  /* Box */
-  --button-border-width
-  --button-border-radius
-  --button-padding-vertical
-  --button-padding-horizontal
+```css
+/* Typographic */
+--breadcrumbs-font-size: inherit;   /* variable for blocks' font-size property */
+--breadcrumbs-font-weight: inherit; /* variable for blocks' font-weight property */
+--breadcrumbs-font-family: inherit; /* variable for blocks' font-family property */
+--breadcrumbs-line-height: inherit; /* variable for blocks' line-height property */
+--breadcrumbs-separator: "\2192";   /* variable for block items separator */
 
-  /* Typographic */
-  --button-font-size
-  --button-font-weight
-  --button-font-family
-  --button-line-height
-
-  /* Colors */
-  --button-border-color
-  --button-color
-  --button-background-color
+/* Colors */
+--breadcrumbs-color: inherit;       /* variable for blocks' color property */
 ```
 
-Let's change the button block color by redefining the CSS rules for the block on the project level (project.blocks) by setting the values of the necessary custom properties.
+Let's change the **breadcrumbs** block separator character by redefining the predefined `--breadcrumbs-separator` custom property value on the project level (project.blocks).
 
 CSS implementation:
 
-```
-.button {
-  --button-border-color: aqua;
-  --button-background-color: aqua;
+```css
+:root {
+  --breadcrumbs-separator: "\002F";
 }
 ```
 
-Furthermore let's add to the button block blue glow in cursor hover condition by redefining the CSS rules for the block on the project level (project.blocks) by adding necessary regular property and set its value.
+Furthermore let's add margins to the block by adding an appropriate regular property and set its value.
 
-CSS implementation:
-
-```
-.button {
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 255, 0.75);
+```css
+.breadcrumbs__item:not(:last-child)::after {
+    margin-left: 1ch;
+    margin-right: 1ch;
 }
 ```
 

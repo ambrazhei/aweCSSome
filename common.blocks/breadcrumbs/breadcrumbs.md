@@ -5,6 +5,28 @@
 HTML implementation:
 
 ```html
+<ul class="breadcrumbs" role="navigation" aria-label="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <span itemprop="name">
+            <a class="breadcrumbs__link" href="#" itemtype="http://schema.org/Thing" itemprop="item">Index</a>
+        </span>
+        <meta itemprop="position" content="1" />
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <span itemprop="name">
+            <a class="breadcrumbs__link" href="#" itemtype="http://schema.org/Thing" itemprop="item">Category</a>
+        </span>
+        <meta itemprop="position" content="2" />
+    </li>
+    <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" aria-current="page">Subategory</a>
+    </li>
+</ul>
+```
+
+HTML implementation without microdata:
+
+```html
 <ul class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Index</a></li>
     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Category</a></li>
@@ -40,6 +62,28 @@ Let's move the **breadcrumbs** last item  to the new line by adding `breadcrumbs
 HTML implementation:
 
 ```html
+<ul class="breadcrumbs breadcrumbs_last-item-newline" role="navigation" aria-label="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <span itemprop="name">
+            <a class="breadcrumbs__link" href="#" itemtype="http://schema.org/Thing" itemprop="item">Index</a>
+        </span>
+        <meta itemprop="position" content="1" />
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <span itemprop="name">
+            <a class="breadcrumbs__link" href="#" itemtype="http://schema.org/Thing" itemprop="item">Category</a>
+        </span>
+        <meta itemprop="position" content="2" />
+    </li>
+    <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" aria-current="page">Subategory</a>
+    </li>
+</ul>
+```
+
+HTML implementation without microdata:
+
+```html
 <ul class="breadcrumbs breadcrumbs_last-item-newline" role="navigation" aria-label="breadcrumbs">
     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Index</a></li>
     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Category</a></li>
@@ -51,7 +95,29 @@ You can add any number of modifiers to a block. For example add `breadcrumbs_las
 
 HTML implementation:
 
+```html
+<ul class="breadcrumbs breadcrumbs_last-item-newline breadcrumbs_last-separator-hidden" role="navigation" aria-label="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <span itemprop="name">
+            <a class="breadcrumbs__link" href="#" itemtype="http://schema.org/Thing" itemprop="item">Index</a>
+        </span>
+        <meta itemprop="position" content="1" />
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <span itemprop="name">
+            <a class="breadcrumbs__link" href="#" itemtype="http://schema.org/Thing" itemprop="item">Category</a>
+        </span>
+        <meta itemprop="position" content="2" />
+    </li>
+    <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" aria-current="page">Subategory</a>
+    </li>
+</ul>
 ```
+
+HTML implementation without microdata:
+
+```html
 <ul class="breadcrumbs breadcrumbs_last-item-newline breadcrumbs_last-separator-hidden" role="navigation" aria-label="breadcrumbs">
     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Index</a></li>
     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Category</a></li>
@@ -71,12 +137,36 @@ HTML implementation:
 
 ```html
 <main class="content">
-    <ul class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+    <ul class="breadcrumbs content__breadcrumbs" role="navigation" aria-label="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span itemprop="name">
+                <a class="breadcrumbs__link" href="#" itemtype="http://schema.org/Thing" itemprop="item">Index</a>
+            </span>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span itemprop="name">
+                <a class="breadcrumbs__link" href="#" itemtype="http://schema.org/Thing" itemprop="item">Category</a>
+            </span>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" aria-current="page">Subategory</a>
+        </li>
+    </ul>
+</main>
+```
+
+HTML implementation without microdata:
+
+```html
+<main class="content">
+    <ul class="breadcrumbs content__breadcrumbs" role="navigation" aria-label="breadcrumbs">
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Index</a></li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Category</a></li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" aria-current="page">Subategory</a></li>
     </ul>
-<main>
+</main>
 ```
 
 CSS implementation:
@@ -116,14 +206,14 @@ The **breadcrumbs** block has the following predefined custom properties (variab
 
 ```css
 /* Typographic */
---breadcrumbs-font-size: inherit;   /* variable for blocks' font-size property */
---breadcrumbs-font-weight: inherit; /* variable for blocks' font-weight property */
---breadcrumbs-font-family: inherit; /* variable for blocks' font-family property */
---breadcrumbs-line-height: inherit; /* variable for blocks' line-height property */
---breadcrumbs-separator: "\2192";   /* variable for block items separator */
+--breadcrumbs-font-size: inherit;       /* variable for blocks' font-size property */
+--breadcrumbs-font-weight: inherit;     /* variable for blocks' font-weight property */
+--breadcrumbs-font-family: inherit;     /* variable for blocks' font-family property */
+--breadcrumbs-line-height: inherit;     /* variable for blocks' line-height property */
+--breadcrumbs-separator: "\2192";       /* variable for block items separator */
 
 /* Colors */
---breadcrumbs-color: inherit;       /* variable for blocks' color property */
+--breadcrumbs-color: inherit;           /* variable for blocks' color property */
 ```
 
 Let's change the **breadcrumbs** block separator character by redefining the predefined `--breadcrumbs-separator` custom property value on the project level (project.blocks).
@@ -136,7 +226,7 @@ CSS implementation:
 }
 ```
 
-Furthermore let's add margins to the block by adding an appropriate regular property and set its value.
+Furthermore, let's extend breadcrumbs separators with margins by adding an appropriate regular property and set its value.
 
 ```css
 .breadcrumbs__item:not(:last-child)::after {

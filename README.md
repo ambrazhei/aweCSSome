@@ -14,6 +14,7 @@
 
 1. [Description](#Description)
 2. [Installation](#Installation)
+2. [Usage](#Usage)
 3. [Browser support](#Browser-support)
 4. [Key concepts](#Key-concepts)
 4. [Contributing](#Contributing)
@@ -38,22 +39,35 @@ Be careful aweCSSome is constantly in development! Try it out on your own risk.
 npm install awecssome
 ```
 
-### Import
-After installation, you can import the CSS file into your project:
+## Usage
+After installation, you can link or import the CSS file into your project:
 
-```sh
-import 'awecssome.css'
+### HTML
+
+```html
+<link rel="stylesheet" href="/path/to/awecssome/awecssome.css" />
 ```
-
-### CDN
-
-Coming soon!
 
 ### CSS
 
 ```css
-@import 'awecssome.css';
+@import '/path/to/awecssome/awecssome.css';
 ```
+
+### Via PostCSS and [postcss-import](https://github.com/postcss/postcss-import)
+
+```sh
+import 'awecssome';
+```
+
+### Via webpack and [css-loader](https://github.com/webpack-contrib/css-loader)
+
+```sh
+import 'awecssome';
+```
+### CDN
+
+Coming soon!
 
 ## Browser support
 
